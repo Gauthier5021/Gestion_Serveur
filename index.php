@@ -54,7 +54,8 @@
                   <p class="ParagrapheOu">Ou</p>
                 <input type="text" class="DomaineText" name="DomaineText" placeholder="ex : example.com" /><br />
                 <input type="submit" class="PingPersoDomaine" name="PingPersoDomaine" value="Verifier Le Domaine" />
-                  <?php echo PingPersoIpEtDomaine(); ?>      
+                  <?php echo PingPersoIpEtDomaine(); ?>
+                  <p>Test</p>      
           </form> 
         </div>
 
