@@ -5,6 +5,9 @@
  <title>Autosun</title>
 </head>
 
+<!-- Fichier Fonction PHP -->
+<?php include("fonction.php"); ?>
+
 <div class="Head">
   <ul class="NavBar">
     <li>Dashboard</li>

@@ -132,10 +132,14 @@ function PingPersoIpEtDomaine()
 // Dépendance
 function Commande()
 {
-    $Commande = "htop iftop";
     $PareFeu = "ufw";
     $Ftp = "Proftpd";
+    $InstallCommande = shell_exec("apt-get install $PareFeu");
     
+    if ($_POST["Tst"])
+    {
+        return $InstallCommande;
+    }
 }
 
 ?>
