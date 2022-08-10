@@ -129,8 +129,6 @@ function PingPersoIpEtDomaine()
 
 }
 
-$Tst = "Tst";
-
 // Dépendance
 
 ?>
