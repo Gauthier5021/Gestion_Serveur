@@ -10,7 +10,7 @@
 
 <div class="Head">
   <ul class="NavBar">
-    <li>Dashboard</li>
+    <li><a href="index.php" class="LienDashboard">Dashboard</a></li>
     <li>Information System</li>
     <li>Task</li>
     <li><a href="service.php" class="LienService">Service</a></li>
