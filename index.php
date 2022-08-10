@@ -11,8 +11,8 @@
 
       <body>
       
-      <!-- Fichier Display PHP -->
-      <?php include("display.php"); ?>
+      <!-- Fichier Fonction PHP -->
+      <?php include("fonction.php"); ?>
 
         <div class="Head">
            <ul class="NavBar">
