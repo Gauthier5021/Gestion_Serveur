@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 
     <html lang="fr">
-      
-      <head>
-        <meta name="author" content="BARAS Gauthier" />
-        <meta charset="utf-8" />
-        <link href="index.css" rel="stylesheet" />
-        <title>Autosun</title>
-      </head>
 
       <body>
       
+      <!-- Barre de navigation -->
+      <?php include("nav.php"); ?>
+
       <!-- Fichier Fonction PHP -->
       <?php include("fonction.php"); ?>
-
-        <div class="Head">
-           <ul class="NavBar">
-             <li>Dashboard</li>
-             <li>Information System</li>
-             <li>Task</li>
-             <li>Service</li>
-             <li>Security</li>
-             <li>Service</li>
-             <li>Data</li>
-             <li>Document</li>  
-           </ul> 
-        </div>
 
         <div class="PingSystem">
           <form class="Form" method="POST">

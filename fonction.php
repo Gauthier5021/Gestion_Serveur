@@ -125,10 +125,17 @@ function PingPersoIpEtDomaine()
     elseif ($_POST["PingPersoDomaine"])
     {
         $Result = "<br />" . $PingDomaine;
+        return $Result;
     }
-
 }
 
 // Dépendance
+function Commande()
+{
+    $Commande = "htop iftop";
+    $PareFeu = "ufw";
+    $Ftp = "Proftpd";
+    
+}
 
 ?>
