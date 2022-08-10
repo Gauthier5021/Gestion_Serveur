@@ -130,7 +130,7 @@ function PingPersoIpEtDomaine()
 }
 
 // Dépendance
-function Commande()
+function InstallationProgramme()
 {
     $PareFeu = "ufw";
     $Ftp = "Proftpd";

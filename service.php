@@ -5,6 +5,4 @@
 
   <input type="submit" class="Tst" name="Tst" value="Installer" />
 
-  <?php echo Commande(); ?>
-
 </form>
