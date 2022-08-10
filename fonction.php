@@ -130,6 +130,11 @@ function PingPersoIpEtDomaine()
 }
 
 // Dépendance
+function Upgrade()
+{
+    $Upgrade = shell_exec("apt-get upgrade");
+}
+
 function InstallationProgramme()
 {
     $PareFeu = "ufw";
