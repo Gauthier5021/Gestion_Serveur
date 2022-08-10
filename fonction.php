@@ -134,7 +134,7 @@ function Commande()
 {
     $PareFeu = "ufw";
     $Ftp = "Proftpd";
-    $InstallCommande = shell_exec("apt-get install $PareFeu");
+    $InstallCommande = shell_exec("apt-get -y install $PareFeu");
     
     if ($_POST["Tst"])
     {
