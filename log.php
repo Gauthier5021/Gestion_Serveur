@@ -1,5 +1,8 @@
 <!-- Fichier Fonction PHP -->
 <?php include("nav.php"); ?>
 
-<!-- Information des logs précédents -->
-<?php echo LogInfo(); ?>
+<!-- Information des utilisateurs -->
+<?php echo LogInfoUser(); ?>
+
+<!-- Information des logs -->
+<?php echo LogInfoSystem(); ?>
