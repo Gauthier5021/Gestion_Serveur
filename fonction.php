@@ -129,7 +129,7 @@ function PingPersoIpEtDomaine()
     }
 }
 
-// Dépendance
+// Installation Programme
 function Upgrade()
 {
     $Upgrade = shell_exec("apt-get upgrade");
@@ -145,6 +145,15 @@ function InstallationProgramme()
     {
         return $InstallCommande;
     }
+}
+
+// Log
+function LogInfo()
+{
+    $UserConnect = shell_exec("w | grep up") . "<br />" . shell_exec("w | grep pts");
+    $Log = shell_exec("ps -ef");
+    $Result = "<h2>Connection Utilisateur</h2><br />" . $UserConnect . "<h2>Activité Précédentes</h2><br />" . "$Log" . "<br />";
+    return $Result; 
 }
 
 ?>
