@@ -152,15 +152,7 @@ function LogInfoUser()
 {
     $UserConnect = shell_exec("w | grep up") . "<br />" . shell_exec("w | grep pts");
     $Result = "<h2>Connection Utilisateur</h2><br />" . $UserConnect;
-    return $Result;
-    
-}
-
-function LogInfoSystem()
-{
-    $Log = shell_exec("ps -ef");
-    $Result = "<wbr>" . "<h2>Activité Précédentes</h2><br />" . "<p>$Log</p>";
-    return $Result; 
+    return $Result;  
 }
 
 ?>
