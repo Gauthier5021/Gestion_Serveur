@@ -9,11 +9,13 @@ function SystemGen()
     /* $IpNetwork = "Ip Network : "  shell_exec("") <- En attente d'une commande shell ; */
     $IpDiff = "Ip Diffusion : " . shell_exec("ip a | grep ens18 | grep inet | cut -c 33-48");
     $Os = "Os : " . shell_exec("uname -a | cut -c 38-55");
+    $CpuModel = "Name CPU  : " . shell_exec("lscpu | grep Model | grep name | cut -c 34-60");
+    $Core = "Core : " . shell_exec("lscpu | grep Core | cut -c 34");
     $Memory = "Memory : " . shell_exec("free -g | grep Mem | cut -c 20");
     $HardDiskSpaceFree = "Space Free Disk : " . shell_exec("df -h /dev/sda1 | grep /dev/sda1 | cut -c 18-20");
     $HardDiskUse = "Use Space Disk : " . shell_exec("df -h /dev/sda1 | grep /dev/sda1 | cut -c 35-37");
     $BackLine = "<br />";
-    $Result = $Hostname . $BackLine . $Uptime . $BackLine . $IpHost . $BackLine . $IpDiff . $BackLine . $Os . $BackLine . $Memory . $BackLine . $HardDiskSpaceFree . $BackLine . $HardDiskUse;
+    $Result = $Hostname . $BackLine . $Uptime . $BackLine . $IpHost . $BackLine . $IpDiff . $BackLine . $Os . $BackLine . $CpuModel . $BackLine . $Core . $Memory . $BackLine . $HardDiskSpaceFree . $BackLine . $HardDiskUse;
     return $Result;
 }
 function Cpu()
@@ -129,12 +131,16 @@ function PingPersoIpEtDomaine()
     }
 }
 
-// Installation Programme
+// Mise à jour et Installation Programme
 function Upgrade()
 {
-    $Upgrade = shell_exec("apt-get upgrade");
+    $Upgrade = exec("apt-get -y upgrade");
+    
+    if ($_POST['Tst'])
+    {
+        return $Upgrade;
+    }
 }
-
 function InstallationProgramme()
 {
     $PareFeu = "ufw";

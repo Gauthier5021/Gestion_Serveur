@@ -7,6 +7,11 @@
       <!-- Barre de navigation -->
       <?php include("nav.php"); ?>
 
+        <div class="InformationSysteme">
+          <h2 class="TitreInfoSysGen">Information Systeme Generale</h2><br />
+          <?php echo SystemGen(); ?>
+        </div>
+
         <div class="PingSystem">
           <form class="Form" method="POST">
             <h2 class="TitrePing">Vérification de communication</h2><br />

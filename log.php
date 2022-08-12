@@ -1,4 +1,4 @@
-<!-- Fichier Fonction PHP -->
+<!-- La NavBar PHP -->
 <?php include("nav.php"); ?>
 
 <!-- Information des utilisateurs -->
