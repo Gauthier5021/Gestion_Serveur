@@ -5,4 +5,4 @@
 <?php echo LogInfoUser(); ?>
 
 <!-- Information des logs -->
-<?php //echo LogInfoSystem(); ?>
+<?php echo LogInfoSystem(); ?>

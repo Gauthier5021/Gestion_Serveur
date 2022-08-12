@@ -154,5 +154,11 @@ function LogInfoUser()
     $Result = "<h2>Connection Utilisateur</h2><br />" . $UserConnect;
     return $Result;  
 }
+function LogInfoSystem()
+{
+    $UserConnect = shell_exec("ps -ef");
+    $Result = "<h2>Taches Précédentes</h2><br />" . "<br />" . $UserConnect;
+    return $Result;  
+}
 
 ?>
