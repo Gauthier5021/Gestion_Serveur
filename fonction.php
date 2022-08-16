@@ -158,6 +158,15 @@ function InstallProgrammBasic()
     // Installation Programme
     if ($_POST['InstallerProg'] && $_POST['AllPackages'])
     {
+        $Commande = 'apt install -y htop unzip proftpd ufw curl';
+        $Install = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Install, true);
+        $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['InstallerProg'] && $_POST['Htop'] && $_POST['Unzip'] && $_POST['Ftp'] && $_POST['PareFeu'])
+    {
         $Commande = 'apt install -y htop unzip proftpd ufw';
         $Install = ssh2_exec($Connect, $Commande);
         stream_set_blocking($Install, true);
@@ -165,9 +174,9 @@ function InstallProgrammBasic()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['InstallerProg'] && $_POST['Htop'] && $_POST['Unzip'] && $_POST['Ftp'])
+    elseif ($_POST['InstallProg'] && $_POST['Unzip'] && $_POST['Ftp'] && $_POST['PareFeu'] && $_POST['Curl'])
     {
-        $Commande = 'apt install -y htop unzip proftpd';
+        $Commande = 'apt install -y unzip proftpd ufw curl';
         $Install = ssh2_exec($Connect, $Commande);
         stream_set_blocking($Install, true);
         $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
