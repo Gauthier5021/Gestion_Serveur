@@ -27,6 +27,6 @@
         <option value="Non">Non</option>
       </select><br />
      <input type="submit" name="InstallerLampp" class="IntallerLampp" value="Installer Lampp" /><br />
-    <?php //echo LAMPP(); ?>   
+    <?php echo LAMPP(); ?>   
 
 </form>
