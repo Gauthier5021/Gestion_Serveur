@@ -134,23 +134,13 @@ function PingPersoIpEtDomaine()
 // Mise à jour et Installation Programme
 function Upgrade()
 {
-    $Upgrade = exec("apt-get -y upgrade");
-    
-    if ($_POST['Tst'])
-    {
-        return $Upgrade;
-    }
-}
-function InstallationProgramme()
-{
-    $PareFeu = "ufw";
-    $Ftp = "Proftpd";
-    $InstallCommande = shell_exec("apt-get -y install $PareFeu");
-    
-    if ($_POST["Tst"])
-    {
-        return $InstallCommande;
-    }
+    $Connect = ssh2_connect('192.168.159.172', 22);
+    ssh2_auth_password($Connect, 'root', 'root');
+
+    $Upgrade = ssh2_exec($Connect, 'apt upgrade');
+    stream_set_blocking($Upgrade, true);
+    $Result = ssh2_fetch_stream($Upgrade, SSH2_STREAM_STDIO);
+    return stream_get_contents($Result);
 }
 
 // Log
