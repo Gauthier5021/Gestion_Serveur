@@ -159,7 +159,8 @@ function InstallProgrammBasic()
     if ($_POST['InstallerProg'] && $_POST['AllPackages'])
     {
         $Programme = 'htop unzip proftpd ufw curl';
-        $Commande = "apt install -y htop $Programme";
+        $PortFtp = 'ufw allow 21';
+        $Commande = "apt install -y htop $Programme && $PortFtp";
         $Install = ssh2_exec($Connect, $Commande);
         stream_set_blocking($Install, true);
         $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
@@ -169,7 +170,8 @@ function InstallProgrammBasic()
     elseif ($_POST['InstallerProg'] && $_POST['Htop'] && $_POST['Unzip'] && $_POST['Ftp'] && $_POST['PareFeu'] && $_POST['Curl'])
     {
         $Programme = 'htop unzip proftpd ufw curl';
-        $Commande = "apt install -y $Programme";
+        $PortFtp = 'ufw allow 21';
+        $Commande = "apt install -y $Programme && $PortFtp";
         $Install = ssh2_exec($Connect, $Commande);
         stream_set_blocking($Install, true);
         $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
@@ -179,7 +181,8 @@ function InstallProgrammBasic()
     elseif ($_POST['InstallerProg'] && $_POST['Htop'] && $_POST['Unzip'] && $_POST['Ftp'] && $_POST['PareFeu'])
     {
         $Programme = 'htop unzip proftpd ufw';
-        $Commande = "apt install -y $Programme";
+        $PortFtp = 'ufw allow 21';
+        $Commande = "apt install -y $Programme && $PortFtp";
         $Install = ssh2_exec($Connect, $Commande);
         stream_set_blocking($Install, true);
         $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
@@ -259,7 +262,7 @@ function InstallProgrammBasic()
 }
 function LAMPP()
 {
-    // Mettre les dépendance
+    $Programme = 'apache2 mariadb-server';
 }
 
 // Log
