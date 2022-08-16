@@ -134,13 +134,37 @@ function PingPersoIpEtDomaine()
 // Mise à jour et Installation Programme
 function Upgrade()
 {
+    // Connection SSH
     $Connect = ssh2_connect('192.168.159.172', 22);
     ssh2_auth_password($Connect, 'root', 'root');
 
-    $Upgrade = ssh2_exec($Connect, 'apt upgrade');
-    stream_set_blocking($Upgrade, true);
-    $Result = ssh2_fetch_stream($Upgrade, SSH2_STREAM_STDIO);
-    return stream_get_contents($Result);
+    // Mise à jour
+    if ($_POST['MiseAJour'])
+    {
+        $Commande = 'apt upgrade';
+        $Upgrade = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Upgrade, true);
+        $Result = ssh2_fetch_stream($Upgrade, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+}
+function InstallProgrammBasic()
+{
+    // Connection SSH
+    $Connect = ssh2_connect('192.168.159.172', 22);
+    ssh2_auth_password($Connect, 'root', 'root');
+
+    // Installation Programme
+    if ($_POST['InstallerProg'] && $_POST['AllPackages'])
+    {
+        $Commande = 'apt install -y htop unzip proftpd';
+        $Install = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Install, true);
+        $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
 }
 
 // Log
