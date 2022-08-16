@@ -262,7 +262,13 @@ function InstallProgrammBasic()
 }
 function LAMPP()
 {
-    $Programme = 'apache2 mariadb-server';
+    $Apache2 = 'apache2';
+    $Mysql = 'maria-server'; // A changer le SGBD
+    $PHP = 'php';
+    $ModulePhp = 'libapache2-mod-php';
+    $PareFeu = 'ufw';
+    $PortHttpEtHttps = 'ufw allow in "WWW Full"';
+    $ExtensionPhp = 'php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip';
 }
 
 // Log
