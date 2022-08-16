@@ -158,6 +158,15 @@ function InstallProgrammBasic()
     // Installation Programme
     if ($_POST['InstallerProg'] && $_POST['AllPackages'])
     {
+        $Commande = 'apt install -y htop unzip proftpd ufw';
+        $Install = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Install, true);
+        $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['InstallerProg'] && $_POST['Htop'] && $_POST['Unzip'] && $_POST['Ftp'])
+    {
         $Commande = 'apt install -y htop unzip proftpd';
         $Install = ssh2_exec($Connect, $Commande);
         stream_set_blocking($Install, true);
