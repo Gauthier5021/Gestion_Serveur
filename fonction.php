@@ -158,7 +158,18 @@ function InstallProgrammBasic()
     // Installation Programme
     if ($_POST['InstallerProg'] && $_POST['AllPackages'])
     {
-        $Commande = 'apt install -y htop unzip proftpd ufw curl';
+        $Programme = 'htop unzip proftpd ufw curl';
+        $Commande = "apt install -y htop $Programme";
+        $Install = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Install, true);
+        $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['InstallerProg'] && $_POST['Htop'] && $_POST['Unzip'] && $_POST['Ftp'] && $_POST['PareFeu'] && $_POST['Curl'])
+    {
+        $Programme = 'htop unzip proftpd ufw curl';
+        $Commande = "apt install -y $Programme";
         $Install = ssh2_exec($Connect, $Commande);
         stream_set_blocking($Install, true);
         $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
@@ -167,22 +178,88 @@ function InstallProgrammBasic()
     }
     elseif ($_POST['InstallerProg'] && $_POST['Htop'] && $_POST['Unzip'] && $_POST['Ftp'] && $_POST['PareFeu'])
     {
-        $Commande = 'apt install -y htop unzip proftpd ufw';
+        $Programme = 'htop unzip proftpd ufw';
+        $Commande = "apt install -y $Programme";
         $Install = ssh2_exec($Connect, $Commande);
         stream_set_blocking($Install, true);
         $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['InstallProg'] && $_POST['Unzip'] && $_POST['Ftp'] && $_POST['PareFeu'] && $_POST['Curl'])
+    elseif ($_POST['InstallerProg'] && $_POST['Htop'] && $_POST['Unzip'] && $_POST['Ftp'])
     {
-        $Commande = 'apt install -y unzip proftpd ufw curl';
+        $Programme = 'htop unzip proftpd';
+        $Commande = "apt install -y $Programme";
         $Install = ssh2_exec($Connect, $Commande);
         stream_set_blocking($Install, true);
         $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
+    elseif ($_POST['InstallerProg'] && $_POST['Htop'] && $_POST['Unzip'])
+    {
+        $Programme = 'htop unzip';
+        $Commande = "apt install -y $Programme";
+        $Install = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Install, true);
+        $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['InstallerProg'] && $_POST['Htop'])
+    {
+        $Programme = 'htop';
+        $Commande = "apt install -y $Programme";
+        $Install = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Install, true);
+        $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['InstallerProg'] && $_POST['Unzip'])
+    {
+        $Programme = 'unzip';
+        $Commande = "apt install -y $Programme";
+        $Install = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Install, true);
+        $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['InstallerProg'] && $_POST['Ftp'])
+    {
+        $Programme = 'proftpd';
+        $Commande = "apt install -y $Programme";
+        $Install = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Install, true);
+        $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['InstallerProg'] && $_POST['PareFeu'])
+    {
+        $Programme = 'ufw';
+        $Commande = "apt install -y $Programme";
+        $Install = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Install, true);
+        $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['InstallerProg'] && $_POST['Curl'])
+    {
+        $Programme = 'curl';
+        $Commande = "apt install -y $Programme";
+        $Install = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Install, true);
+        $Result = ssh2_fetch_stream($Install, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+}
+function LAMPP()
+{
+    // Mettre les dépendance
 }
 
 // Log

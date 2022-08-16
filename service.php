@@ -19,5 +19,4 @@
     <input type="submit" name="InstallerProg" class="InstallerProg" value="Installer" /><br />
     <?php echo InstallProgrammBasic(); ?>
 
-
 </form>
