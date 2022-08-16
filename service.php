@@ -19,4 +19,14 @@
     <input type="submit" name="InstallerProg" class="InstallerProg" value="Installer" /><br />
     <?php echo InstallProgrammBasic(); ?>
 
+  <!-- Installation de la pile lampp -->
+    <h1 class="TitreLampp">Installation De Lampp</h1><br />
+      <h3 class="TitreSecuriteLampp">Voulez vous une sécurité ?</h3><br />
+      <select class="ConditionPareFeuHttp" name="ConditionPareFeuHttp">
+        <option value="Oui">Oui</option>
+        <option value="Non">Non</option>
+      </select><br />
+     <input type="submit" name="InstallerLampp" class="IntallerLampp" value="Installer Lampp" /><br />
+    <?php //echo LAMPP(); ?>   
+
 </form>

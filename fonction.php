@@ -262,13 +262,31 @@ function InstallProgrammBasic()
 }
 function LAMPP()
 {
+    // Connection SSH
+    $Connect = ssh2_connect('192.168.159.172', 22);
+    ssh2_auth_password($Connect, 'root', 'root');
+    
+    // Les dépendences
     $Apache2 = 'apache2';
-    $Mysql = 'maria-server'; // A changer le SGBD
+    $Mysql = 'maria-server'; // -> A changer le SGBD
     $PHP = 'php';
     $ModulePhp = 'libapache2-mod-php';
     $PareFeu = 'ufw';
-    $PortHttpEtHttps = 'ufw allow in "WWW Full"';
+    $PortWeb = 'ufw allow in "WWW Full"';
     $ExtensionPhp = 'php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip';
+    $ConditionPareFeu = $_POST['ConditionPareFeuHttp'];
+    $LamppEtPareFeu = $Apache2 . " " . $Mysql . " " . $PHP . " " . $ModulePhp . " " . $PareFeu . " " . $PortWeb . " " . $ExtensionPhp;
+    $LamppSansPareFeu = $Apache2 . " " . $Mysql . " " . $PHP . " " . $ModulePhp . " " . $ExtensionPhp;
+    
+    if ($ConditionPareFeu == "Oui" && $_POST['InstallerLampp'])
+    {
+        $Commande = "apt install -y $LamppEtPareFeu";
+        $Lampp = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Lampp, true);
+        $Result = ssh2_fetch_stream($Lampp, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display; 
+    }
 }
 
 // Log
