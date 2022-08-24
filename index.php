@@ -43,6 +43,9 @@
           </form> 
         </div>
 
+        <!-- Le Fichier JS -->
+        <script src="index.js"></script>
+
       </body>
 
     </html>
