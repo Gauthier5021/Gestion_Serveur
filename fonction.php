@@ -268,7 +268,7 @@ function LAMPP()
     
     // Les dépendences
     $Apache2 = 'apache2';
-    //$Mysql = 'maria-server'; -> A changer le SGBD
+    //$Mysql = 'maria-server'; -> A changer le SGBD en MYSQL
     $PHP = 'php';
     $ModulePhp = 'libapache2-mod-php';
     $PareFeu = 'ufw';
@@ -306,9 +306,19 @@ function LogInfoUser()
 }
 function LogInfoSystem()
 {
-    $UserConnect = shell_exec("ps -ef");
-    $Result = "<h2>Taches Précédentes</h2><br />" . "<br />" . $UserConnect;
+    $InfoSystem = shell_exec("ps -ef");
+    $Result = "<h2>Taches Précédentes</h2><br />" . "<br />" . $InfoSystem;
     return $Result;  
+}
+
+// La sécurité
+function PareFeu()
+{
+    // Port De Communication Autoriser
+    $Http = 80;
+    $Https = 443;
+    $Ftp = 21;
+    $Dns = 53
 }
 
 ?>

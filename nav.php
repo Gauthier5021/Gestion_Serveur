@@ -15,7 +15,6 @@
     <li><a href="log.php" class="LienLog">Log</a></li>
     <li><a href="service.php" class="LienService">Service</a></li>
     <li>Security</li>
-    <li>Service</li>
     <li>Data</li>
     <li>Document</li>  
   </ul> 
