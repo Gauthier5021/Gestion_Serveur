@@ -20,6 +20,6 @@
     <label>Imap :<input type="checkbox" class="Imap" name="Imap" /></label><br />
 
     <input type="submit" class="BoutonPareFeu" name="BoutonPareFeu" value="Confirmer" /><br />
-    <?php echo PareFeu(); ?>
+    <?php echo PareFeuYes(); ?>
 
 </form>

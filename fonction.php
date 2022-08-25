@@ -312,7 +312,7 @@ function LogInfoSystem()
 }
 
 // La sécurité
-function PareFeu()
+function PareFeuYes()
 {
     //Connection Ssh
     $Connect = ssh2_connect('192.168.159.172', 22);
