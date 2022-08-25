@@ -3,8 +3,12 @@
 
 <form class="Form" method="POST">
 
-    <h1 class="TitreServiceAutoriser">Service Autoriser</h1><br />
+    <h1 class="TitreAffichagePareFeu">Règle Disponible</h1><br />
+    <input type="submit" class="BoutonDisplayPareFeu" name="BoutonDisplayPareFeu" value="Afficher" /><br />
+    <?php echo DisplayPareFeu(); ?><br />
+
     <!-- Service Autoriser Ou Refuser -->
+    <h1 class="TitreServiceAutoriser">Service Autoriser</h1><br />
     <select class="ConditionService" name="ConditionService">
         <option value="Autoriser">Autoriser</option>
         <option value="Refuser">Refuser</option>
@@ -19,7 +23,7 @@
     <label>Pop3 :<input type="checkbox" class="Pop3" name="Pop3" /></label><br />
     <label>Imap :<input type="checkbox" class="Imap" name="Imap" /></label><br />
 
-    <input type="submit" class="BoutonPareFeu" name="BoutonPareFeu" value="Confirmer" /><br />
+    <input type="submit" class="BoutonPareFeuAdd" name="BoutonPareFeuAdd" value="Ajouter Cette Règle" /><br />
     <?php echo PareFeuYes(); ?>
 
 </form>

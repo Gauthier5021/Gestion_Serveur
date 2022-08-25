@@ -312,6 +312,23 @@ function LogInfoSystem()
 }
 
 // La sécurité
+function DisplayPareFeu()
+{
+    //Connection Ssh
+    $Connect = ssh2_connect('192.168.159.172', 22);
+    ssh2_auth_password($Connect, 'root', 'root');
+
+    if ($_POST['BoutonDisplayPareFeu'])
+    {
+        $Commande = "ufw status verbose";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+}
+
 function PareFeuYes()
 {
     //Connection Ssh
@@ -330,7 +347,7 @@ function PareFeuYes()
     $Imap = "143";
 
     // Condition pour le parefeu
-    if ($_POST['ConditionService'] == "Autoriser" && $_POST['Ssh'])
+    if ($_POST['ConditionService'] == "Autoriser" && $_POST['Ssh'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Ssh";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -339,7 +356,7 @@ function PareFeuYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Http'])
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Http'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Http";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -348,7 +365,7 @@ function PareFeuYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Https'])
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Https'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Https";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -357,7 +374,7 @@ function PareFeuYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['FtpPareFeu'])
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['FtpPareFeu'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Ftp";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -366,7 +383,7 @@ function PareFeuYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['SftpPareFeu'])
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['SftpPareFeu'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Sftp";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -375,7 +392,7 @@ function PareFeuYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['DnsPareFeu'])
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['DnsPareFeu'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Dns";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -384,7 +401,7 @@ function PareFeuYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Smtp'])
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Smtp'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Smtp";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -393,7 +410,7 @@ function PareFeuYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Pop3'])
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Pop3'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Pop3";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -402,7 +419,7 @@ function PareFeuYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Imap'])
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Imap'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Imap";
         $Ufw = ssh2_exec($Connect, $Commande);
