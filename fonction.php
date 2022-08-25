@@ -328,7 +328,6 @@ function DisplayPareFeu()
         return $Display;
     }
 }
-
 function PareFeuYes()
 {
     //Connection Ssh
