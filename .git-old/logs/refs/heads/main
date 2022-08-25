@@ -1,0 +1,36 @@
+0000000000000000000000000000000000000000 6046849aca9284299566117474b7fc514742a203 root <root@autosun.(none)> 1660141773 +0200	clone: from https://github.com/Gauthier5021/Gestion_Serveur.git
+6046849aca9284299566117474b7fc514742a203 d7aaf3e3ec9ea7435ab2612637fe7aa3287e3c05 Gauthier_5021 <autosun.barasg@gmail.com> 1660142379 +0200	commit: Tdt
+d7aaf3e3ec9ea7435ab2612637fe7aa3287e3c05 6b4a9d1e301084f7ced455ac4a6e8aca3c6a980b Gauthier_5021 <autosun.barasg@gmail.com> 1660142505 +0200	commit: Tst
+6b4a9d1e301084f7ced455ac4a6e8aca3c6a980b aaf1cb4d890eb5ad14ff58934b6e8b357ea372a1 Gauthier_5021 <autosun.barasg@gmail.com> 1660142549 +0200	commit: Tst
+aaf1cb4d890eb5ad14ff58934b6e8b357ea372a1 6e5f8151905813f67788816b0170baf2883b7203 Gauthier_5021 <autosun.barasg@gmail.com> 1660142665 +0200	commit: Variable
+6e5f8151905813f67788816b0170baf2883b7203 2a91dc8476f8b3c06624c7a726eb44b0d41366ef Gauthier_5021 <autosun.barasg@gmail.com> 1660142711 +0200	commit: Fonction PHP
+2a91dc8476f8b3c06624c7a726eb44b0d41366ef b35ba954c88057f185fd6bbab4925e8bf005dab8 Gauthier_5021 <autosun.barasg@gmail.com> 1660145209 +0200	commit: Nouveau Fichier PHP Service
+b35ba954c88057f185fd6bbab4925e8bf005dab8 3c4b3a014c403538a60aa6f2ff736671cca0634e Gauthier_5021 <autosun.barasg@gmail.com> 1660145312 +0200	commit: Renommage
+3c4b3a014c403538a60aa6f2ff736671cca0634e a56e14deda80b2815928a301f7dbde5aa61da418 Gauthier_5021 <autosun.barasg@gmail.com> 1660146164 +0200	commit: Version 2
+a56e14deda80b2815928a301f7dbde5aa61da418 164c4fead8818cbe3799535c17a9f3076adabbbf Gauthier_5021 <autosun.barasg@gmail.com> 1660147933 +0200	commit: Version 3
+164c4fead8818cbe3799535c17a9f3076adabbbf e43f910028b457b7c7155a4b8e03343feb9abfbe Gauthier_5021 <autosun.barasg@gmail.com> 1660147971 +0200	commit: Fichier Sql
+e43f910028b457b7c7155a4b8e03343feb9abfbe cb46f3f67ff8343dbbf5ee55767cac215746fa6e Gauthier_5021 <autosun.barasg@gmail.com> 1660148496 +0200	commit: Version 3
+cb46f3f67ff8343dbbf5ee55767cac215746fa6e a32f9be36a6f40cda38b7a12353f11c29821fc43 Gauthier_5021 <autosun.barasg@gmail.com> 1660148602 +0200	commit: NavBar Modifier
+a32f9be36a6f40cda38b7a12353f11c29821fc43 7df3a33e5d865ae1b8897a43d69678eacdc9004f Gauthier_5021 <autosun.barasg@gmail.com> 1660148676 +0200	commit: Modification Temporaire
+7df3a33e5d865ae1b8897a43d69678eacdc9004f 41ca2c57e7b377ee9a1a10dbf428c1ad1156706a Gauthier_5021 <autosun.barasg@gmail.com> 1660150117 +0200	commit: Modification sur les apt
+41ca2c57e7b377ee9a1a10dbf428c1ad1156706a 568ffd2ca1cd59d2badf7e6abd69384e07b717c9 Gauthier_5021 <autosun.barasg@gmail.com> 1660210916 +0200	commit: Fichier Log Ajouter
+568ffd2ca1cd59d2badf7e6abd69384e07b717c9 5231e9c4268de4cd7f3f53033e69c7f838ed8f2b Gauthier_5021 <autosun.barasg@gmail.com> 1660213620 +0200	commit: Update des fonction et page HTML
+5231e9c4268de4cd7f3f53033e69c7f838ed8f2b cb547dc1df7c4f4cc12658ed2649747e4043e8e0 Gauthier_5021 <autosun.barasg@gmail.com> 1660213859 +0200	commit: Repaire Documentation
+cb547dc1df7c4f4cc12658ed2649747e4043e8e0 c833f0d13e734b52cf816d7c025414b71e7241cc Gauthier_5021 <autosun.barasg@gmail.com> 1660215635 +0200	commit: Update des fonction php
+c833f0d13e734b52cf816d7c025414b71e7241cc 2d139af554f956a5a30f5425f60e3add1ce1c1e4 Gauthier_5021 <autosun.barasg@gmail.com> 1660301312 +0200	commit: Version 1
+2d139af554f956a5a30f5425f60e3add1ce1c1e4 175ab98b76142d0ff540ec9097829224b8706527 Gauthier_5021 <autosun.barasg@gmail.com> 1660301335 +0200	commit: Version 1
+175ab98b76142d0ff540ec9097829224b8706527 0c68d38415472eab03e5ad5c60db351a2a4a56c3 Gauthier_5021 <autosun.barasg@gmail.com> 1660323570 +0200	commit: Version 2
+0c68d38415472eab03e5ad5c60db351a2a4a56c3 f23005e4a379c99568dee8a56023a9f3dd0265a6 Gauthier_5021 <autosun.barasg@gmail.com> 1660332418 +0200	commit: Version 3
+f23005e4a379c99568dee8a56023a9f3dd0265a6 c9192f154b2b47382f26bc893cc54cce50134ee1 Gauthier_5021 <autosun.barasg@gmail.com> 1660334676 +0200	commit: Modification
+c9192f154b2b47382f26bc893cc54cce50134ee1 39e44ff5b268bc4d095d9c026c0501a4c4f52dc5 Gauthier_5021 <autosun.barasg@gmail.com> 1660338043 +0200	commit: Version 4
+39e44ff5b268bc4d095d9c026c0501a4c4f52dc5 e5ce4bd272fb4f6e63e9ed60baf8d5f0454b5ff2 Gauthier_5021 <autosun.barasg@gmail.com> 1660658688 +0200	commit: Création De La Fonction PHP SSH
+e5ce4bd272fb4f6e63e9ed60baf8d5f0454b5ff2 3cb3fe37914459d91898296ea8ad9fc1d4782715 Gauthier_5021 <autosun.barasg@gmail.com> 1660663241 +0200	commit: Ajouts des programmes sur la fonction InstallBasic
+3cb3fe37914459d91898296ea8ad9fc1d4782715 016c5fb89603a0e74a1a9135fd037ad6b0ac3958 Gauthier_5021 <autosun.barasg@gmail.com> 1660663983 +0200	commit: Version 16/08/2022
+016c5fb89603a0e74a1a9135fd037ad6b0ac3958 15305ceb5c3d2a6e9a3c9c748acd56316b0f2f4f Gauthier_5021 <autosun.barasg@gmail.com> 1660668281 +0200	commit: Version 3
+15305ceb5c3d2a6e9a3c9c748acd56316b0f2f4f e9d6bd3615d3fbb95137c36f812231926a840d85 Gauthier_5021 <autosun.barasg@gmail.com> 1660669521 +0200	commit: Finalisation Des Programmes Basic
+e9d6bd3615d3fbb95137c36f812231926a840d85 1b7157a9269662e586e73e2466c68ef09ea6f919 Gauthier_5021 <autosun.barasg@gmail.com> 1660670662 +0200	commit: Ajout du port FTP dans UFW
+1b7157a9269662e586e73e2466c68ef09ea6f919 daa808f01084a61fd33918a08843d12fb6956f78 Gauthier_5021 <autosun.barasg@gmail.com> 1660671335 +0200	commit: Création De La Fonction LAMPP Service HTTP
+daa808f01084a61fd33918a08843d12fb6956f78 8bb65582712b85a8e10cd6c07b0ecd2cfc74efbb Gauthier_5021 <autosun.barasg@gmail.com> 1660672874 +0200	commit: Modification PHP et HTML
+8bb65582712b85a8e10cd6c07b0ecd2cfc74efbb a0e6d4e26d8ac6227b0842ed44d74fc23fbdc093 Gauthier_5021 <autosun.barasg@gmail.com> 1660673975 +0200	commit: Finalisation de la fonction LAMPP PHP
+a0e6d4e26d8ac6227b0842ed44d74fc23fbdc093 a706535f978ad83470dc017d9915c30278208eaf Gauthier_5021 <autosun.barasg@gmail.com> 1661361087 +0200	commit: Mise en place du JS
+a706535f978ad83470dc017d9915c30278208eaf fb691e8046e9fea1539faf9f0f9f51f2b3904293 Gauthier_5021 <autosun.barasg@gmail.com> 1661361838 +0200	commit: Création de la fonction PHP PareFeu
