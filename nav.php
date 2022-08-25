@@ -11,10 +11,10 @@
 <div class="Head">
   <ul class="NavBar">
     <li><a href="index.php" class="LienDashboard">Dashboard</a></li>
-    <li><a href="information.php" class="LienInformation" />Information System</a></li>
+    <li><a href="information.php" class="LienInformation">Information System</a></li>
     <li><a href="log.php" class="LienLog">Log</a></li>
     <li><a href="service.php" class="LienService">Service</a></li>
-    <li>Security</li>
+    <li><a href="security.php" class="LienSecurity">Security</a></li>
     <li>Data</li>
     <li>Document</li>  
   </ul> 

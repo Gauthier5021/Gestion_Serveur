@@ -314,11 +314,51 @@ function LogInfoSystem()
 // La sécurité
 function PareFeu()
 {
+    //Connection Ssh
+    $Connect = ssh2_connect('192.168.159.172', 22);
+    ssh2_auth_password($Connect, 'root', 'root');
+    
     // Port De Communication Autoriser
-    $Http = 80;
-    $Https = 443;
-    $Ftp = 21;
-    $Dns = 53
+    $Ssh = "22";
+    $Http = "80";
+    $Https = "443";
+    $Ftp = "21";
+    $Sftp = "115";
+    $Dns = "53";
+    $Smtp = "25";
+    $Pop3 = "110";
+    $Imap = "143";
+
+    // Condition pour le parefeu
+    if ($_POST['ConditionService'] == "Autoriser" && $_POST['Ssh'])
+    {
+        $Commande = "ufw allow $Ssh";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] && $_POST['Http'])
+    {
+        $Commande = "ufw allow $Http";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] && $_POST['Https'])
+    {
+        $Commande = "ufw allow $Https";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
 }
+
+// "ufw allow $Ssh && ufw allow $Http && ufw allow $Https && ufw allow $Ftp && ufw allow $Sftp && ufw allow $Dns && ufw allow $Smtp && ufw allow $Pop3 && ufw allow $Imap";
 
 ?>
