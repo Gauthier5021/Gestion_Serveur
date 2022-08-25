@@ -357,7 +357,6 @@ function PareFeu()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    dzqdq
 }
 
 // "ufw allow $Ssh && ufw allow $Http && ufw allow $Https && ufw allow $Ftp && ufw allow $Sftp && ufw allow $Dns && ufw allow $Smtp && ufw allow $Pop3 && ufw allow $Imap";
