@@ -13,8 +13,9 @@
     <label>Http :<input type="checkbox" class="Http" name="Http" /></label><br />
     <label>Https :<input type="checkbox" class="Https" name="Https" /></label><br />
     <label>Ftp :<input type="checkbox" class="FtpPareFeu" name="FtpPareFeu" /></label><br />
+    <label>Sftp :<input type="checkbox" class="SftpPareFeu" name="SftpPareFeu" /></label><br />
     <label>Dns :<input type="checkbox" class="DnsPareFeu" name="DnsPareFeu" /></label><br />
-    <label>Stmp :<input type="checkbox" class="Smtp" name="Smtp" /></label><br />
+    <label>Smtp :<input type="checkbox" class="Smtp" name="Smtp" /></label><br />
     <label>Pop3 :<input type="checkbox" class="Pop3" name="Pop3" /></label><br />
     <label>Imap :<input type="checkbox" class="Imap" name="Imap" /></label><br />
 

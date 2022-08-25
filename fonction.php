@@ -272,8 +272,8 @@ function LAMPP()
     $PHP = 'php';
     $ModulePhp = 'libapache2-mod-php';
     $PareFeu = 'ufw';
-    $PortWeb_Http = "ufw allow in 80";
-    $PortWeb_Https = "ufw allow in 443";
+    $PortWeb_Http = "ufw allow 80";
+    $PortWeb_Https = "ufw allow 443";
     $ExtensionPhp = 'php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip';
     $ConditionPareFeu = $_POST['ConditionPareFeuHttp'];
     
@@ -339,7 +339,7 @@ function PareFeu()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] && $_POST['Http'])
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Http'])
     {
         $Commande = "ufw allow $Http";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -348,9 +348,63 @@ function PareFeu()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] && $_POST['Https'])
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Https'])
     {
         $Commande = "ufw allow $Https";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['FtpPareFeu'])
+    {
+        $Commande = "ufw allow $Ftp";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['SftpPareFeu'])
+    {
+        $Commande = "ufw allow $Sftp";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['DnsPareFeu'])
+    {
+        $Commande = "ufw allow $Dns";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Smtp'])
+    {
+        $Commande = "ufw allow $Smtp";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Pop3'])
+    {
+        $Commande = "ufw allow $Pop3";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Imap'])
+    {
+        $Commande = "ufw allow $Imap";
         $Ufw = ssh2_exec($Connect, $Commande);
         stream_set_blocking($Ufw, true);
         $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
