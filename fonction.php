@@ -328,7 +328,7 @@ function DisplayPareFeu()
         return $Display;
     }
 }
-function PareFeuYes()
+function PareFeuServiceYes()
 {
     //Connection Ssh
     $Connect = ssh2_connect('192.168.159.172', 22);
@@ -448,7 +448,7 @@ function PareFeuYes()
         return $Display;
     }
 }
-function PareFeuNo()
+function PareFeuServiceNo()
 {
     //Connection Ssh
     $Connect = ssh2_connect('192.168.159.172', 22);
