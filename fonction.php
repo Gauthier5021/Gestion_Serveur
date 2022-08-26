@@ -344,6 +344,8 @@ function PareFeuYes()
     $Smtp = "25";
     $Pop3 = "110";
     $Imap = "143";
+    $Ldap = "389";
+    $Mysql = "3306";
 
     // Condition pour le parefeu
     if ($_POST['ConditionService'] == "Autoriser" && $_POST['Ssh'] && $_POST['BoutonPareFeuAdd'])
@@ -427,8 +429,144 @@ function PareFeuYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Ldap'] && $_POST['BoutonPareFeuAdd'])
+    {
+        $Commande = "ufw allow $Ldap";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Mysql'] && $_POST['BoutonPareFeuAdd'])
+    {
+        $Commande = "ufw allow $Mysql";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
 }
+function PareFeuNo()
+{
+    //Connection Ssh
+    $Connect = ssh2_connect('192.168.159.172', 22);
+    ssh2_auth_password($Connect, 'root', 'root');
+    
+    // Port De Communication Autoriser
+    $Ssh = "22";
+    $Http = "80";
+    $Https = "443";
+    $Ftp = "21";
+    $Sftp = "115";
+    $Dns = "53";
+    $Smtp = "25";
+    $Pop3 = "110";
+    $Imap = "143";
+    $Ldap = "389";
+    $Mysql = "3306";
 
-// "ufw allow $Ssh && ufw allow $Http && ufw allow $Https && ufw allow $Ftp && ufw allow $Sftp && ufw allow $Dns && ufw allow $Smtp && ufw allow $Pop3 && ufw allow $Imap";
+    // Condition pour le parefeu
+    if ($_POST['ConditionService'] == "Refuser" && $_POST['Ssh'] && $_POST['BoutonPareFeuAdd'])
+    {
+        $Commande = "ufw deny $Ssh";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['Http'] && $_POST['BoutonPareFeuAdd'])
+    {
+        $Commande = "ufw deny $Http";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['Https'] && $_POST['BoutonPareFeuAdd'])
+    {
+        $Commande = "ufw deny $Https";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['FtpPareFeu'] && $_POST['BoutonPareFeuAdd'])
+    {
+        $Commande = "ufw deny $Ftp";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['SftpPareFeu'] && $_POST['BoutonPareFeuAdd'])
+    {
+        $Commande = "ufw deny $Sftp";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['DnsPareFeu'] && $_POST['BoutonPareFeuAdd'])
+    {
+        $Commande = "ufw deny $Dns";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['Smtp'] && $_POST['BoutonPareFeuAdd'])
+    {
+        $Commande = "ufw deny $Smtp";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['Pop3'] && $_POST['BoutonPareFeuAdd'])
+    {
+        $Commande = "ufw deny $Pop3";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['Imap'] && $_POST['BoutonPareFeuAdd'])
+    {
+        $Commande = "ufw deny $Imap";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['Ldap'] && $_POST['BoutonPareFeuAdd'])
+    {
+        $Commande = "ufw deny $Ldap";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['Mysql'] && $_POST['BoutonPareFeuAdd'])
+    {
+        $Commande = "ufw deny $Mysql";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+}
 
 ?>

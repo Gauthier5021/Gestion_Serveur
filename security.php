@@ -22,8 +22,15 @@
     <label>Smtp :<input type="checkbox" class="Smtp" name="Smtp" /></label><br />
     <label>Pop3 :<input type="checkbox" class="Pop3" name="Pop3" /></label><br />
     <label>Imap :<input type="checkbox" class="Imap" name="Imap" /></label><br />
+    <label>Ldap :<input type="checkbox" class="Ldap" name="Ldap" /></label><br />
+    <label>Mysql :<input type="checkbox" class="Mysql" name="Mysql" /></label><br />
 
     <input type="submit" class="BoutonPareFeuAdd" name="BoutonPareFeuAdd" value="Ajouter Cette Règle" /><br />
+    
+    <!-- Autorisation -->
     <?php echo PareFeuYes(); ?>
+    
+    <!-- Refus -->
+    <?php echo PareFeuNo(); ?>
 
 </form>
