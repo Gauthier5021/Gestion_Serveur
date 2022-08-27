@@ -668,5 +668,6 @@ function PareFeuIpNo()
         return $Display;
     }
 }
+dzq
 
 ?>
