@@ -2,7 +2,7 @@
  <meta name="author" content="BARAS Gauthier" />
  <meta charset="utf-8" />
  <title>Autosun</title>
- <link href="index.css" rel="stylesheet" />
+ <link href="Css/index.css" rel="stylesheet" />
 </head>
 
 <!-- Fichier Fonction PHP -->
