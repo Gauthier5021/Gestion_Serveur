@@ -46,6 +46,5 @@
 
     <!-- Refus Des IPV4 Sous réseaux -->
     <?php echo PareFeuIpNo(); ?>
-    dzq
 
 </form>
