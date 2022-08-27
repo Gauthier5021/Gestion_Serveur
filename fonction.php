@@ -348,7 +348,7 @@ function PareFeuServiceYes()
     $Mysql = "3306";
 
     // Condition pour le parefeu
-    if ($_POST['ConditionService'] == "Autoriser" && $_POST['Ssh'] && $_POST['BoutonPareFeuAdd'])
+    if ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['Ssh'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Ssh";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -357,7 +357,7 @@ function PareFeuServiceYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Http'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['Http'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Http";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -366,7 +366,7 @@ function PareFeuServiceYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Https'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['Https'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Https";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -375,7 +375,7 @@ function PareFeuServiceYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['FtpPareFeu'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['FtpPareFeu'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Ftp";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -384,7 +384,7 @@ function PareFeuServiceYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['SftpPareFeu'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['SftpPareFeu'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Sftp";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -393,7 +393,7 @@ function PareFeuServiceYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['DnsPareFeu'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['DnsPareFeu'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Dns";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -402,7 +402,7 @@ function PareFeuServiceYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Smtp'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['Smtp'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Smtp";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -411,7 +411,7 @@ function PareFeuServiceYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Pop3'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['Pop3'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Pop3";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -420,7 +420,7 @@ function PareFeuServiceYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Imap'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['Imap'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Imap";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -429,7 +429,7 @@ function PareFeuServiceYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Ldap'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['Ldap'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Ldap";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -438,7 +438,7 @@ function PareFeuServiceYes()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Autoriser" && $_POST['Mysql'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['Mysql'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw allow $Mysql";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -468,7 +468,7 @@ function PareFeuServiceNo()
     $Mysql = "3306";
 
     // Condition pour le parefeu
-    if ($_POST['ConditionService'] == "Refuser" && $_POST['Ssh'] && $_POST['BoutonPareFeuAdd'])
+    if ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['Ssh'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw deny $Ssh";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -477,7 +477,7 @@ function PareFeuServiceNo()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['Http'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['Http'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw deny $Http";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -486,7 +486,7 @@ function PareFeuServiceNo()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['Https'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['Https'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw deny $Https";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -495,7 +495,7 @@ function PareFeuServiceNo()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['FtpPareFeu'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['FtpPareFeu'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw deny $Ftp";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -504,7 +504,7 @@ function PareFeuServiceNo()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['SftpPareFeu'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['SftpPareFeu'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw deny $Sftp";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -513,7 +513,7 @@ function PareFeuServiceNo()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['DnsPareFeu'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['DnsPareFeu'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw deny $Dns";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -522,7 +522,7 @@ function PareFeuServiceNo()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['Smtp'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['Smtp'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw deny $Smtp";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -531,7 +531,7 @@ function PareFeuServiceNo()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['Pop3'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['Pop3'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw deny $Pop3";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -540,7 +540,7 @@ function PareFeuServiceNo()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['Imap'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['Imap'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw deny $Imap";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -549,7 +549,7 @@ function PareFeuServiceNo()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['Ldap'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['Ldap'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw deny $Ldap";
         $Ufw = ssh2_exec($Connect, $Commande);
@@ -558,9 +558,109 @@ function PareFeuServiceNo()
         $Display = "<br />" . stream_get_contents($Result);
         return $Display;
     }
-    elseif ($_POST['ConditionService'] == "Refuser" && $_POST['Mysql'] && $_POST['BoutonPareFeuAdd'])
+    elseif ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['Mysql'] && $_POST['BoutonPareFeuAdd'])
     {
         $Commande = "ufw deny $Mysql";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+}
+function PareFeuIpYes()
+{
+    // Connection Ssh
+    $Connect = ssh2_connect('192.168.159.172', 22);
+    ssh2_auth_password($Connect, 'root', 'root');
+
+    // Adresse IPV4 Privées Full Class Sous Réseaux
+    $TypeA = "10.0.0.0/8";
+    $TypeB1 = "172.16.0.0/16";
+    $TypeB2 = "172.31.0.0/16";
+    $TypeC = "192.168.1.0/24";
+
+    // Condition
+    if ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['IpTypeA'])
+    {
+        $Commande = "ufw allow from $TypeA";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['IpTypeB1'])
+    {
+        $Commande = "ufw allow from $TypeB1";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['IpTypeB2'])
+    {
+        $Commande = "ufw allow from $TypeB2";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionPareFeu'] == "Autoriser" && $_POST['IpTypeC'])
+    {
+        $Commande = "ufw allow from $TypeC";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+}
+function PareFeuIpNo()
+{
+    // Connection Ssh
+    $Connect = ssh2_connect('192.168.159.172', 22);
+    ssh2_auth_password($Connect, 'root', 'root');
+
+    // Adresse IPV4 Privées Full Class Sous Réseaux
+    $TypeA = "10.0.0.0/8";
+    $TypeB1 = "172.16.0.0/16";
+    $TypeB2 = "172.31.0.0/16";
+    $TypeC = "192.168.1.0/24";
+
+    // Condition
+    if ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['IpTypeA'])
+    {
+        $Commande = "ufw deny from $TypeA";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['IpTypeB1'])
+    {
+        $Commande = "ufw deny from $TypeB1";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['IpTypeB2'])
+    {
+        $Commande = "ufw deny from $TypeB2";
+        $Ufw = ssh2_exec($Connect, $Commande);
+        stream_set_blocking($Ufw, true);
+        $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
+        $Display = "<br />" . stream_get_contents($Result);
+        return $Display;
+    }
+    elseif ($_POST['ConditionPareFeu'] == "Refuser" && $_POST['IpTypeC'])
+    {
+        $Commande = "ufw deny from $TypeC";
         $Ufw = ssh2_exec($Connect, $Commande);
         stream_set_blocking($Ufw, true);
         $Result = ssh2_fetch_stream($Ufw, SSH2_STREAM_STDIO);
