@@ -5,7 +5,7 @@
       <body>
       
       <!-- Barre de navigation -->
-      <?php include("nav.php"); ?>
+      <?php include("Nav/nav.php"); ?>
 
         <div class="InformationSysteme">
           <h2 class="TitreInfoSysGen">Information Systeme Generale</h2><br />

@@ -1,5 +1,5 @@
 <!-- La NavBar PHP -->
-<?php include("nav.php"); ?>
+<?php include("Nav/nav.php"); ?>
 
 <!-- Information System Général -->
 <h1 class="TitreInformationSysteme">Information System</h1><br />

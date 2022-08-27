@@ -1,5 +1,5 @@
 <!-- La NavBar PHP -->
-<?php include("nav.php"); ?>
+<?php include("Nav/nav.php"); ?>
 
 <!-- Information des utilisateurs -->
 <?php echo LogInfoUser(); ?>
