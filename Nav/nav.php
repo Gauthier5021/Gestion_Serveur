@@ -23,7 +23,7 @@
 <div class="sidebar">
   <div class="logo_content">
     <div class="logo">
-      <!-- Mettre un logo pour la nav -->
+      <img src="Icon/BarreNav/home-alt-2-solid-36.png" class="IconNav" alt="Icon de navigation" /><br />
       <div class="logo_name">Gestionnaire Serveur</div>
     </div>
   </div>
