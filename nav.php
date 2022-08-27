@@ -3,8 +3,6 @@
  <meta charset="utf-8" />
  <title>Autosun</title>
  <link href="index.css" rel="stylesheet" />
- <!-- Boxicons CDN Link -->
- 
 </head>
 
 <!-- Fichier Fonction PHP -->
@@ -25,6 +23,7 @@
 <div class="sidebar">
   <div class="logo_content">
     <div class="logo">
+      <!-- Mettre un logo pour la nav -->
       <div class="logo_name">Gestionnaire Serveur</div>
     </div>
   </div>
