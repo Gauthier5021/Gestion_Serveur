@@ -8,16 +8,15 @@
 <!-- Fichier Fonction PHP -->
 <?php include("fonction.php"); ?>
 
-<body>
-
+<form class="FormNav" method="POST">
   <div class="NavBar">
-    <ul>
-      <li>Dashboard</li>
-      <li>Information Systeme</li>
-      <li>Logs Systeme</li>
-      <li>Service</li>
-      <li>Sécurité</li>
+    <ul class="Nav">
+      <li><a href="index.php" class="LienNav"><img src="Icon/BarreNav/icons8-groupe-de-serveurs-80.png" class="MainIconNav" /></a></li>
+      <li class="SousNav"><a href="information.php" class="LienNav">Information Systeme</a></li>
+      <li class="SousNav"><a href="log.php" class="LienNav">Logs Systeme</a></li>
+      <li class="SousNav"><a href="service.php" class="LienNav">Service</a></li>
+      <li class="SousNav"><a href="security.php " class="LienNav">Sécurité</a></li>
+      <li class="SousNav"><img src="Icon/BarreNav/icons8-chercher-50.png" class="IconSearch" /><input type="text" class="Search" name="Search" placeholder="Recherche" /></li>
     </ul>
   </div>
-
-</body>
+</form> 
