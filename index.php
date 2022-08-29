@@ -40,8 +40,10 @@
                 <input type="text" class="DomaineText" name="DomaineText" placeholder="ex : example.com" /><br />
                 <input type="submit" class="PingPersoDomaine" name="PingPersoDomaine" value="Verifier Le Domaine" />
                   <?php echo PingPersoIpEtDomaine(); ?>
-          </form> 
+          </form>
         </div>
+
+        <h1 class="Test">Test</h1>
 
         <!-- Le Fichier JS -->
         <script src="index.js"></script>
