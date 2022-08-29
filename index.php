@@ -43,8 +43,6 @@
           </form>
         </div>
 
-        <h1 class="Test">Test</h1>
-
         <!-- Le Fichier JS -->
         <script src="index.js"></script>
 
