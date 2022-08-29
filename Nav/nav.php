@@ -8,23 +8,43 @@
 <!-- Fichier Fonction PHP -->
 <?php include("fonction.php"); ?>
 
-<div class="Head">
-    <ul class="NavBar">
-      <li><a href="index.php" class="LienDashboard">Dashboard</a></li>
-      <li><a href="information.php" class="LienInformation">Information System</a></li>
-      <li><a href="log.php" class="LienLog">Log</a></li>
-      <li><a href="service.php" class="LienService">Service</a></li>
-      <li><a href="security.php" class="LienSecurity">Security</a></li>
-      <li>Data</li>
-      <li>Document</li>  
-    </ul> 
-</div>
-
 <div class="sidebar">
-  <div class="logo_content">
-    <div class="logo">
-      <!-- Mettre un logo pour la nav -->
-      <div class="logo_name">Gestionnaire Serveur</div>
-    </div>
-  </div>
+  <ul class="NavBar">
+    <li>
+      <form method="POST" class="SearchNav">
+        <img src="Icon/BarreNav/search-alt-2-regular-24.png" class="IconNavLien" />
+        <input type="text" class="SearchNav" name="SearchNav" placeholder="rechercher" />
+      </form>
+    </li>
+    <li>
+      <a href="index.php">
+        <img src="Icon/BarreNav/dashboard-solid-24.png" class="IconNavLien" />
+        <span class="links_name">Dashboard</span>
+      </a>
+    </li>
+    <li>
+      <a href="information.php">
+        <img src="Icon/BarreNav/desktop-regular-24.png" class="IconNavLien" />
+        <span class="links_name">Information Systeme</span>
+      </a>
+    </li>
+    <li>
+      <a href="log.php">
+        <img src="Icon/BarreNav/notepad-regular-24.png" class="IconNavLien" />
+        <span class="links_name">Logs Systeme</span>
+      </a>
+    </li>
+    <li>
+      <a href="service.php">
+        <img src="Icon/BarreNav/server-regular-24.png" class="IconNavLien" />
+        <span class="links_name">Service</span>
+      </a>
+    </li>
+    <li>
+      <a href="security.php">
+        <img src="Icon/BarreNav/lock-alt-regular-24.png" class="IconNavLien" />
+        <span class="links_name">Sécurité</span>
+      </a>
+    </li>
+  </ul>
 </div>
